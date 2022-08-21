@@ -1,0 +1,3 @@
+﻿AadharNumber,Name,DateOfBirth,PAN,SalaryEarned,Allowances,PensionType,BankName,AccountNumber,BankType
+1234-5678-9012,Vinayak,21-09-1990 00:00,AZ1234,60000,500,Self,SBI,12345abc,Public
+0123-4567-8901,Ram,22-09-1990 00:00,XY1234,40000,600,Family,HDFC,4567qwe,Private
