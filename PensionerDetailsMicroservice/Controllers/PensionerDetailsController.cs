@@ -11,7 +11,7 @@ namespace PensionerDetailsMicroservice.Controllers
 {
     [Route("api/PensionerDetails")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class PensionerDetailsController : ControllerBase
     {
         private readonly IPensionerDetailsRepository _pensionerDetailRepo;
@@ -26,7 +26,7 @@ namespace PensionerDetailsMicroservice.Controllers
         public async Task<IActionResult> GetDetailsAsync()
         {
             _log4net.Info(" Http GET Request From GetDetails method of: " + nameof(PensionerDetailsController));
-            var path = @"C:\Users\912682\FSE0\Backend\Pension_Management\PensionerDetailsMicroservice\PensionerDetails.csv";
+            var path = @"PensionerDetails.csv";
 
             //Here We are calling function to read CSV file
             var resultData = await _pensionerDetailRepo.ReadCSVFile(path);
@@ -38,7 +38,7 @@ namespace PensionerDetailsMicroservice.Controllers
         public async Task<IActionResult> GetPensionerDetailAsync(string aadharNumber)
         {
             _log4net.Info(" Http GET Request From GetPensionerDetails method of: " + nameof(PensionerDetailsController));
-            var path = @"C:\Users\912682\FSE0\Backend\Pension_Management\PensionerDetailsMicroservice\PensionerDetails.csv";
+            var path = @"PensionerDetails.csv";
 
             //Here We are calling function to read CSV file
             var resultData = await _pensionerDetailRepo.ReadCSVFile(path);
