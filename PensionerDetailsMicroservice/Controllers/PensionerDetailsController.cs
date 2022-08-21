@@ -11,7 +11,7 @@ namespace PensionerDetailsMicroservice.Controllers
 {
     [Route("api/PensionerDetails")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class PensionerDetailsController : ControllerBase
     {
         private readonly IPensionerDetailsRepository _pensionerDetailRepo;
