@@ -20,7 +20,7 @@ namespace PensionerDetailsMicroservice.Test
             var expectedCount = 3;
 
             //act
-            var result = await _pensionerDetailsRepository.ReadCSVFile(@"C:\Users\912682\OneDrive - Cognizant\Desktop\DummyPEnsionerDetails.csv");
+            var result = await _pensionerDetailsRepository.ReadCSVFile(@"C:\Users\912682\FSE0\Backend\Pension_Management\PensionerDetailsMicroservice.Test\DummyPEnsionerDetails.csv");
             //assert
             Assert.Equal(expectedCount, result.Count);
         }

@@ -25,7 +25,7 @@ namespace PensionerDetailsMicroservice.Test
         public async void GetListOfPensioners()
         {
             var pensioner = await GetSampleDetails();
-            service.Setup(x => x.ReadCSVFile(@"C:\Users\912682\FSE0\Backend\Pension_Management\PensionerDetailsMicroservice\PensionerDetails.csv")).Returns(GetSampleDetails);
+            service.Setup(x => x.ReadCSVFile(@"PensionerDetails.csv")).Returns(GetSampleDetails);
             var controller = new PensionerDetailsController(service.Object);
 
             //act
@@ -43,7 +43,7 @@ namespace PensionerDetailsMicroservice.Test
         {
             var pensioner = await GetSampleDetails();
             var firstPensioner = pensioner[0];
-            service.Setup(x => x.ReadCSVFile(@"C:\Users\912682\FSE0\Backend\Pension_Management\PensionerDetailsMicroservice\PensionerDetails.csv")).Returns(GetSampleDetails);
+            service.Setup(x => x.ReadCSVFile(@"PensionerDetails.csv")).Returns(GetSampleDetails);
             var controller = new PensionerDetailsController(service.Object);
 
             //act
@@ -61,7 +61,7 @@ namespace PensionerDetailsMicroservice.Test
         {
             var pensioner = await GetSampleDetails();
             var firstPensioner = pensioner[0];
-            service.Setup(x => x.ReadCSVFile(@"C:\Users\912682\FSE0\Backend\Pension_Management\PensionerDetailsMicroservice\PensionerDetails.csv")).Returns(GetSampleDetails);
+            service.Setup(x => x.ReadCSVFile(@"PensionerDetails.csv")).Returns(GetSampleDetails);
             var controller = new PensionerDetailsController(service.Object);
 
             //act
